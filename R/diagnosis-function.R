@@ -1,7 +1,7 @@
 #' @title test whether linear model assumptions have been violated
-#' @describeIn test for unusual data, nonlinearity, non-normality, non-constant error variance, auto-correlation
-#' @param  x an object, which is a result from a linear model
-#' @param  y is the name of text file you want to create (e.g.,'mydiagnosis.txt')
+#' @description  test for unusual data, nonlinearity, non-normality, non-constant error variance, auto-correlation
+#' @param  x an object, which is a result from a linear model (lm)
+#' @param  file is the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
 #' Note that the file will be saved at the working directory
 #' @export
 #' @return The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma
