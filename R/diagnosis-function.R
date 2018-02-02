@@ -8,7 +8,7 @@
 
 
 
-diagns<-function(x,y){
+diagns<-function(x,file='result.txt'){
 
 ### for unusal data ###########
   plot(density(rstudent(x)))
@@ -63,21 +63,21 @@ diagns<-function(x,y){
 
 ### save the test results in a file named based on your second parameter, y #####
 
-  cat("\n","\n","The outlier test shows","\n",file=y,append = TRUE)
+  cat("\n","\n","The outlier test shows","\n",file=file,append = TRUE)
   out<-capture.output(outlierTest(x))
-  cat(out,file=y,append=TRUE,fill=2,sep = "\n")
+  cat(out,file=file,append=TRUE,fill=2,sep = "\n")
 
-  cat("\n","\n","The durbinWatson tests if p value is <.05 for autocorrelation. If so, use robust regression","\n",file=y, append = TRUE)
+  cat("\n","\n","The durbinWatson tests if p value is <.05 for autocorrelation. If so, use robust regression","\n",file=file, append = TRUE)
    out<-capture.output(durbinWatsonTest(x))
-  cat(out,file=y,append=TRUE,fill=3,sep = "\n")
+  cat(out,file=file,append=TRUE,fill=3,sep = "\n")
 
-  cat("\n","\n","The collinearity test if VIF>4","\n",file=y, append = TRUE)
+  cat("\n","\n","The collinearity test if VIF>4","\n",file=file, append = TRUE)
   out<-capture.output(vif(x))
-  cat(out,file=y,append=TRUE,sep = "\n")
+  cat(out,file=file,append=TRUE,sep = "\n")
 
-  cat("\n","\n","The linear model assumptions test shows","\n",file=y, append = TRUE)
+  cat("\n","\n","The linear model assumptions test shows","\n",file=file, append = TRUE)
   out<-capture.output(gvlma(x))
-  cat(out,file=y,append=TRUE,sep = "\n")
+  cat(out,file=file,append=TRUE,sep = "\n")
 
 ### display the test results on the screen ########
 
