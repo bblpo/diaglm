@@ -32,9 +32,7 @@ diagns<-function(x,file='result.txt'){
   dev.off()
 
 ### check nonlinerity #########
-  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
-  dev.copy(png,'crPlot.png')
-  dev.off()
+
   #ceresPlots(x,main="ceresPlots for nonlinerity")
   residualPlots(x,main="residualPlot for nonlinearity (no curve, no systematic feature)")
   dev.copy(png,'residualPlot.png')
@@ -56,7 +54,7 @@ diagns<-function(x,file='result.txt'){
   dev.copy(png,'spread.png')
   dev.off()
 
-### examine the explanatory variables
+### examine the overall model fit
   marginalModelPlots(x,main="marginalModelPlots")
   dev.copy(png,'marginal.png')
   dev.off()
@@ -90,6 +88,11 @@ diagns<-function(x,file='result.txt'){
   all<-list("outlierTest"=a,"Durbin Watson Test"=b,
             "collinearityTest-VIF"=c,"check violations of LM assumptions"=d)
   return(all)
+
+### Since CrPlot cannot be used for interactive term, put it last here:
+  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
+  dev.copy(png,'crPlot.png')
+  dev.off()
 
 }
 
