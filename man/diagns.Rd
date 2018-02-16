@@ -4,19 +4,17 @@
 \alias{diagns}
 \title{test whether linear model assumptions have been violated}
 \usage{
-diagns(x, y)
+diagns(x, file = "result.txt")
 }
 \arguments{
-\item{x}{an object, which is a result from a linear model}
+\item{x}{an object, which is a result from a linear model (lm)}
 
-\item{y}{is the name of text file you want to create (e.g.,'mydiagnosis.txt')
+\item{file}{is the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
 Note that the file will be saved at the working directory}
 }
 \value{
 The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma
 }
-\section{Functions}{
-\itemize{
-\item \code{diagns}: for unusual data, nonlinearity, non-normality, non-constant error variance, auto-correlation
-}}
-
+\description{
+test for unusual data, nonlinearity, non-normality, non-constant error variance, auto-correlation
+}

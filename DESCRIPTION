@@ -1,7 +1,7 @@
 Package: diaglm
 Type: Package
-Title: Do multiple diagnoses for linear model output, plot and save 
-Version: 0.1.2
+Title: Do multiple diagnoses for linear model output. Plot and save the diagnoses. It also tests the transformation of response variable.
+Version: 0.2.1
 Author: Baodong Liu
 Maintainer: Baodong Liu <bblpo@yahoo.com>
 Description: This package tests a particular linear model in terms of whether the model assumpitions have been violated.
