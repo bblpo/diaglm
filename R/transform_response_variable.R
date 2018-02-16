@@ -1,15 +1,3 @@
-#####################################################################################################################
-###### create a power transformation to correct the response variable and rerun the model ###########################
-#####################################################################################################################
-
-### In order to use this function, you need to make the response variable values all positive and run the regression first
-### three parameters need to be passed by the function
-# x=the output of the regression
-# y=the response variable to be transformed
-# z=the name for the text file to be saved in the working directory
-# Also, it is important that the "diagns" function is in the same working directory (diagns is a function I wrote to do regression diagnosis)
-
-
 #' @title find the best transformatio of response variable, and then run the linear model based on the best transformation
 #' @description  tranaform the y and rerun the linear model
 #' @param  mod an lm object, which is a result from a linear model (lm)
