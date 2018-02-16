@@ -77,6 +77,13 @@ diagns<-function(x,file='result.txt'){
   out<-capture.output(gvlma(x))
   cat(out,file=file,append=TRUE,sep = "\n")
 
+
+
+  ### Since CrPlot cannot be used for interactive term, put it last here:
+  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
+  dev.copy(png,'crPlot.png')
+  dev.off()
+
 ### display the test results on the screen ########
 
   a<-outlierTest(x)
@@ -88,11 +95,6 @@ diagns<-function(x,file='result.txt'){
   all<-list("outlierTest"=a,"Durbin Watson Test"=b,
             "collinearityTest-VIF"=c,"check violations of LM assumptions"=d)
   return(all)
-
-### Since CrPlot cannot be used for interactive term, put it last here:
-  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
-  dev.copy(png,'crPlot.png')
-  dev.off()
 
 }
 

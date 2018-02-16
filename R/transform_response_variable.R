@@ -12,7 +12,7 @@ transformY<-function(x,y,file='tranformResult.txt'){
 
 p1<-powerTransform(x) ## p1 is a statistical test to find the best power function for the response variable
 
-y1round<-bcPower(as.numeric(y),coef(p1,round=TRUE))
+y1round<<-bcPower(as.numeric(y),coef(p1,round=TRUE)) # we need to make y1round global
 d2<-update(x,y1round~.)  ## rerun the regression based on the new transformed response variable
 qqPlot(d2) # display a qqPlot for the new residual analysis
 
