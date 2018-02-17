@@ -8,7 +8,7 @@
 
 
 
-diagns<-function(x,file='result.txt'){
+diaglm<-function(x,file='result.txt'){
 
 ### for unusal data ###########
   plot(density(rstudent(x)))

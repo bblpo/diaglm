@@ -6,6 +6,7 @@
 #' Note that the file will be saved at the working directory
 #' @export
 #' @return The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma
+#' @return y1round the transformed y vector as in the global environment
 
 
 transformY<-function(x,y,file='tranformResult.txt'){
@@ -27,7 +28,7 @@ out<-capture.output(summary(d2))
 cat(out,file=file,append=TRUE,fill=2,sep = "\n")
 
 # perform the diagnosis for the regression based on the transformed response variable
-diagns(d2,file=file)
+diaglm(d2,file=file)
 }
 
 ## If this transformation of response variable doesn't improve much the final fit, you may need to check the explanatory variables.

@@ -16,6 +16,8 @@ Note that the file will be saved at the working directory}
 }
 \value{
 The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma
+
+y1round the transformed y vector as in the global environment
 }
 \description{
 tranaform the y and rerun the linear model
