@@ -2,11 +2,14 @@
 #' @description  tranaform the y and rerun the linear model
 #' @param  x an lm object, which is a result from a linear model (lm)
 #' @param y the response variable you would like to transform
-#' @param  file is the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
+#' @param  file the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
 #' Note that the file will be saved at the working directory
+#' @examples
+#' mod<-lm(data$tolerance_scale~data$sg_participation+data$virtual_si+as.numeric(data$EDUC)+as.numeric(data$yrbrn)+data$IVRACE2+data$IVRACE3+data$gndr+as.numeric(data$lrscale))
+#' transformY(mod,data$tolerance_scale)
 #' @export
 #' @return The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma
-#' @return y1round the transformed y vector as in the global environment
+#' @return y1round a transformed y vector in the global environment
 
 
 transformY<-function(x,y,file='tranformResult.txt'){
