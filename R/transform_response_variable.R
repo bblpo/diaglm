@@ -1,6 +1,6 @@
 #' @title find the best transformatio of response variable, and then run the linear model based on the best transformation
 #' @description  tranaform the y and rerun the linear model
-#' @param  mod an lm object, which is a result from a linear model (lm)
+#' @param  x an lm object, which is a result from a linear model (lm)
 #' @param y the response variable you would like to transform
 #' @param  file is the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
 #' Note that the file will be saved at the working directory

@@ -7,12 +7,12 @@
 transformY(x, y, file = "tranformResult.txt")
 }
 \arguments{
+\item{x}{an lm object, which is a result from a linear model (lm)}
+
 \item{y}{the response variable you would like to transform}
 
 \item{file}{is the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
 Note that the file will be saved at the working directory}
-
-\item{mod}{an lm object, which is a result from a linear model (lm)}
 }
 \value{
 The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma

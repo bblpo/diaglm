@@ -1,8 +1,7 @@
-
-#' virtual. dataset for replication study of Kittilson and Dalton (2011)
-#' Original article used virtual. Kittilson, Miki Caul and Russell J. Dalton. (2011). “Virtual Civil Society: The New Frontier of Social Capital?” Political Behavior: Volume 33, Issue 4, pp 625-644
+#' a dataset for replication study.
+#' original article: Kittilson, Miki Caul and Russell J. Dalton. (2011). “Virtual Civil Society: The New Frontier of Social Capital?” Political Behavior: Volume 33, Issue 4, pp 625-644
 #'
-#' virtual. The newly added variables are as follows:
+#' society. The newly added variables are as follows:
 #' \itemize{
 #'   \item tolerance_scale. the response variable for model 1 of Table 4, Kittilson and Dalton (2011)
 #'   \item duty_based_index. the response variable for model 2 of Table 4, Kittilson and Dalton (2011)
@@ -17,6 +16,6 @@
 #' @source \url{https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/4607}
 #' @docType data
 #' @keywords datasets
-#' @name virtual
-#' @usage data(virtual)
+#' @name society
+#' @usage data(society)
 NULL
