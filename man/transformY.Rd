@@ -11,14 +11,18 @@ transformY(x, y, file = "tranformResult.txt")
 
 \item{y}{the response variable you would like to transform}
 
-\item{file}{is the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
+\item{file}{the name of text file you want to create (e.g.,'mydiagnosis.txt'). It is iniated as 'result.txt'
 Note that the file will be saved at the working directory}
 }
 \value{
 The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma
 
-y1round the transformed y vector as in the global environment
+y1round a transformed y vector in global environment
 }
 \description{
 tranaform the y and rerun the linear model
+}
+\examples{
+mod<-lm(data$tolerance_scale~data$sg_participation+data$virtual_si+as.numeric(data$EDUC)+as.numeric(data$yrbrn)+data$IVRACE2+data$IVRACE3+data$gndr+as.numeric(data$lrscale))
+transformY(mod,data$tolerance_scale)
 }

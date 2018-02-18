@@ -9,7 +9,7 @@
 #' transformY(mod,data$tolerance_scale)
 #' @export
 #' @return The statistical tests results, outlierTest, durbinWatsonTest, VIF, and gvlma
-#' @return y1round a transformed y vector in the global environment
+#' @return y1round a transformed y vector in global environment
 
 
 transformY<-function(x,y,file='tranformResult.txt'){
