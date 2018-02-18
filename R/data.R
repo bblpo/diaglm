@@ -18,4 +18,8 @@
 #' @keywords datasets
 #' @name data
 #' @usage data(data)
+#' @examples
+#' data(data)
+#' mod<-lm(data$tolerance_scale~data$sg_participation+data$virtual_si+as.numeric(data$EDUC)+as.numeric(data$yrbrn)+data$IVRACE2+data$IVRACE3+data$gndr+as.numeric(data$lrscale))
+#' summary(mod)
 NULL
